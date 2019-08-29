@@ -20,11 +20,11 @@ public class AddCatServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
 		
-		String catName = request.getParameter("catName");
+		String catname = request.getParameter("catname");
 		//String catId = request.getParameter("catId");		
 		
-		CategoryServices.addCatalog(catName);
-		response.sendRedirect("/catalogPage.jsp");
+		CategoryServices.addCatalog(catname);
+		response.sendRedirect("/categoryPage.jsp");
 			
 	}
 

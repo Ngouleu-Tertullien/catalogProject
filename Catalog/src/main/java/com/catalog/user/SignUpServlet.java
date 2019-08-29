@@ -26,9 +26,11 @@ public class SignUpServlet extends HttpServlet {
 		
 		String name = request.getParameter("name");
 		String password = request.getParameter("password");
+		String tel = request.getParameter("tel");
+		String email = request.getParameter("email");
 		
-		usersignupService.AddUser(name, password);
-		response.sendRedirect("/login.jsp");
+		usersignupService.AddUser(name, password, tel, email);
+		response.sendRedirect("/loginPage.jsp");
 		
 	}
 

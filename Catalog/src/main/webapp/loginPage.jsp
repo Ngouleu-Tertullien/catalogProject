@@ -57,6 +57,7 @@
 	</form>
 	<ul>
 		<li><a href="/home.do">go to Home page</a></li>
+		<li><a href="/signup.do">SIGNUP</a></li>
 		</ul>
 
 	</div>

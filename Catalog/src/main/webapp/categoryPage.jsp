@@ -1,5 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
 <!DOCTYPE html>
 <html>
 
@@ -51,13 +51,14 @@
 		<H1>CATEGORY PAGE</H1>
 		
 		<h3>Here are the Categories</h3>
-		<ol>
-			<c:forEach items="${catalogs}" var="category">
-				<li>${product.name}&nbsp;
-				<a href="/delete-catalog.go?product=${catalog.name}">Delete</a></li>
-			</c:forEach>
-		</ol>
+		<sql:setDataSource var = "catDB" driver="com.mysql.jdbc.Driver" 
+							url="jdbc:mysql://localhost:3306/Catalog" user="root" password=""/>
+		<sql:query var = "rs" dataSource = "${catDB}">select * from category</sql:query>
 		
+			<c:forEach items="${rs.rows}" var="category">
+				<br><c:out value="${category.catId}"></c:out> :: <c:out value="${category.catname}"></c:out>
+				&nbsp;&nbsp; <a href="/delete-catalog.go?catname=${category.catname}">Delete</a>
+			</c:forEach>
 		<form method="POST" action="/add-catalog.go">
 			New Product : Category Name: <input name="catname" type="text" /> <br><br>
 			

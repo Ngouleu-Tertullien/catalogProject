@@ -1,23 +1,61 @@
 package com.catalog.category;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.sql.*;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
 
 public class CategoryServices {
-	 
-	public static List<Category> categories = new ArrayList<Category>();
+	 	
+	public static String retreiveCategory(){
+
+		try {
+			String sql = "select * from category";
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Catalog", "root","");
+			PreparedStatement ps = con.prepareStatement(sql);	
+			ResultSet rs = ps.executeQuery();
+			while(rs.next()) {
+				return rs.getString("catname");
+			}
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
 	
-	public static List<Category> retreiveCatalog(){
-		return categories;
-	}
-	public static void addCatalog(String catName) {		
-		Category category = new Category(catName);
-		categories.add(category);
-		 return ;
-	}
-	public static void deleteCatalog(Category category) {		
-		categories.remove(category);
+	
+	
+	public static void addCatalog(String catname) {		
+		try {
+			String sql = "insert into category(catname) values(?)";
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Catalog", "root","");
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, catname);	
+			ps.executeUpdate();
+			return;
+			
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		}
 		return ;
 	}
+	
+	
+	public static void deleteCatalog(String catname) {		
+		try {
+			String sql = "delete from category where catname = "+catname;
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Catalog", "root","");
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.executeUpdate();
+			return;
+			
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		}
 
+	}
 }

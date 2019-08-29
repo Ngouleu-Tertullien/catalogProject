@@ -17,8 +17,8 @@ public class DeleteCatServlet  extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
-		CategoryServices.deleteCatalog(new Category(request.getParameter("catName")));
-		response.sendRedirect("/catalogPage.jsp");	
+		CategoryServices.deleteCatalog(request.getParameter("catname"));
+		response.sendRedirect("/categoryPage.jsp");	
 			
 	}
 

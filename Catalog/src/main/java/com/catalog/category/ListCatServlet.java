@@ -17,7 +17,7 @@ public class ListCatServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
-		request.setAttribute("catalog",CategoryServices.retreiveCatalog());
+		request.setAttribute("category",CategoryServices.retreiveCategory());
 		request.getRequestDispatcher("/categoryPage.jsp").forward(request, response);
 	}
 
