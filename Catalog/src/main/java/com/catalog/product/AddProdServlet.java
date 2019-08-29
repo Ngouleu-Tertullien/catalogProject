@@ -20,7 +20,7 @@ public class AddProdServlet extends HttpServlet {
 		
 		
 		ProductServices.addProduct(name,prodCat,Integer.parseInt(price));
-		response.sendRedirect("/productPage.jsp");	
+		request.getRequestDispatcher("/productPage.jsp").forward(request, response);	
 	}
 
 }

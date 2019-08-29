@@ -5,6 +5,14 @@
 
 <head>
 <title>Yahoo!!</title>
+
+<style type="text/css">
+body{background-color:#eee}
+h1,h2{font-family: cursive;background-color: #2e87d4;color:#fff;padding:20px;text-align:center}
+a{padding:20px;margin:20px;border-radius:5px;color:#fef}
+
+</style>
+
 <!-- Bootstrap core CSS -->
 <link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
 	rel="stylesheet">
@@ -36,12 +44,12 @@
 
 		<div class="navbar-collapse">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Home</a></li>
+				<li class="active"><a href="/home.do">Home</a></li>
 				<li><a href="/category.do">Category</a></li>
 				<li><a href="/product.do">Product</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/logout.do">Logout</a></li>
+				<li><a href="/logout.do" class="btn btn-danger"><font color = "white">Logout</font></a></li>
 			</ul>
 		</div>
 

@@ -7,24 +7,6 @@ import java.sql.SQLException;
 
 
 public class CategoryServices {
-	 	
-	public static String retreiveCategory(){
-
-		try {
-			String sql = "select * from category";
-			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Catalog", "root","");
-			PreparedStatement ps = con.prepareStatement(sql);	
-			ResultSet rs = ps.executeQuery();
-			while(rs.next()) {
-				return rs.getString("catname");
-			}
-		} catch (ClassNotFoundException | SQLException e) {
-			e.printStackTrace();
-		}
-		return null;
-	}
-	
 	
 	
 	public static void addCatalog(String catname) {		
@@ -44,9 +26,9 @@ public class CategoryServices {
 	}
 	
 	
-	public static void deleteCatalog(String catname) {		
+	public static void deleteCatalog( int catId) {		
 		try {
-			String sql = "delete from category where catname = "+catname;
+			String sql = "delete from category where catId ="+catId;
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/Catalog", "root","");
 			PreparedStatement ps = con.prepareStatement(sql);

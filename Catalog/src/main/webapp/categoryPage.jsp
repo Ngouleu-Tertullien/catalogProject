@@ -5,6 +5,14 @@
 
 <head>
 <title>Yahoo!!</title>
+
+<style type="text/css">
+body{background-color:#eee}
+h1,h2{font-family: cursive;background-color: #2e87d4;color:#fff;padding:20px;text-align:center}
+a{padding:20px;margin:20px;border-radius:5px;color:#fef}
+
+</style>
+
 <!-- Bootstrap core CSS -->
 <link href="webjars/bootstrap/3.3.6/css/bootstrap.min.css"
 	rel="stylesheet">
@@ -36,12 +44,12 @@
 
 		<div class="navbar-collapse">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Home</a></li>
+				<li class="active"><a href="/home.do">Home</a></li>
 				<li><a href="/category.do">Category</a></li>
 				<li><a href="/product.do">Product</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/logout.do">Logout</a></li>
+				<li><a href="/logout.do" class="btn btn-danger"><font color = "white">Logout</font></a></li>
 			</ul>
 		</div>
 
@@ -55,17 +63,26 @@
 							url="jdbc:mysql://localhost:3306/Catalog" user="root" password=""/>
 		<sql:query var = "rs" dataSource = "${catDB}">select * from category</sql:query>
 		
-			<c:forEach items="${rs.rows}" var="category">
-				<br><c:out value="${category.catId}"></c:out> :: <c:out value="${category.catname}"></c:out>
-				&nbsp;&nbsp; <a href="/delete-catalog.go?catname=${category.catname}">Delete</a>
+		<table class="table table-striped">
+		<thead> <th>Category ID</th> <th>Category Name</th> </thead>
+		
+			<tbody><c:forEach items="${rs.rows}" var="category">
+				<tr><td><c:out value="${category.catId}"></c:out></td><td> <c:out value="${category.catname}"></c:out></td><td>
+				<a href="/delete-catalog.go?catId=${category.catId}" class="btn btn-danger">Delete</a></td></tr>
 			</c:forEach>
+			</tbody>
+		</table>
+		
+		<br><br>
+		
+		<hr>
+		
+		<h2>ADD NEW CATALOGS HERE!</h2>
 		<form method="POST" action="/add-catalog.go">
-			New Product : Category Name: <input name="catname" type="text" /> <br><br>
-			
-						<!--  Category ID: <input name="catId" type="text" /> <br><br>-->
-						
-					    <input name="Add" type="submit" /> 
+			New Product :<p> Category Name: <input name="catname" type="text" /> </p>						
+					   <p> <input name="Add" type="submit" class="btn btn-success"/> </p>
 		</form>
+		
 
 	</div>
 

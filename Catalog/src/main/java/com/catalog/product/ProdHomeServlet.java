@@ -8,18 +8,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
-@WebServlet(urlPatterns = "/delete-product.go")
-public class DeleteProdServlet extends HttpServlet{
+@WebServlet(urlPatterns = "/product.do")
+public class ProdHomeServlet extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
-		
-		String prodId = request.getParameter("prodId");
-		
-		ProductServices.deleteProduct(Integer.parseInt(prodId));
-		request.getRequestDispatcher("/productPage.jsp").forward(request, response);	
-			
+		request.getRequestDispatcher("/productPage.jsp").forward(request, response);
 	}
 
 }
+
