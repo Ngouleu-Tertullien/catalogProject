@@ -1,8 +1,7 @@
 C:\Users\domssi\Documents\Catalog\src\main\java\com\catalog\user\UserLoginServices.java
-C:\Users\domssi\Documents\Catalog\src\main\java\com\catalog\product\ListProdServlet.java
-C:\Users\domssi\Documents\Catalog\src\main\java\com\catalog\category\ListCatServlet.java
 C:\Users\domssi\Documents\Catalog\src\main\java\com\loginFilter\LoginFilter.java
 C:\Users\domssi\Documents\Catalog\src\main\java\com\catalog\category\Category.java
+C:\Users\domssi\Documents\Catalog\src\main\java\com\catalog\category\CatHomeServlet.java
 C:\Users\domssi\Documents\Catalog\src\main\java\com\catalog\user\LogoutServlet.java
 C:\Users\domssi\Documents\Catalog\src\main\java\com\catalog\user\UserSignUpServices.java
 C:\Users\domssi\Documents\Catalog\src\main\java\com\catalog\product\DeleteProdServlet.java
@@ -14,5 +13,6 @@ C:\Users\domssi\Documents\Catalog\src\main\java\com\catalog\product\AddProdServl
 C:\Users\domssi\Documents\Catalog\src\main\java\com\catalog\product\Product.java
 C:\Users\domssi\Documents\Catalog\src\main\java\com\catalog\category\DeleteCatServlet.java
 C:\Users\domssi\Documents\Catalog\src\main\java\com\catalog\user\User.java
+C:\Users\domssi\Documents\Catalog\src\main\java\com\catalog\product\ProdHomeServlet.java
 C:\Users\domssi\Documents\Catalog\src\main\java\com\catalog\category\CategoryServices.java
 C:\Users\domssi\Documents\Catalog\src\main\java\com\catalog\user\SignUpServlet.java

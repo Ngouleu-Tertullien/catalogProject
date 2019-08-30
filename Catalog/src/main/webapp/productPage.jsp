@@ -50,7 +50,7 @@ a{padding:20px;margin:20px;border-radius:5px;color:#fef}
 				<li><a href="/product.do">Product</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/logout.do" class="btn btn-danger"><font color = "white">Logout</font></a></li>
+				<li><a href="/logout.do" class="btn btn-danger"><font color = "pink">Logout</font></a></li>
 			</ul>
 		</div>
 
@@ -59,7 +59,8 @@ a{padding:20px;margin:20px;border-radius:5px;color:#fef}
 	<div class="container">
 		<H1 align="center">PRODUCT PAGE</H1>
 		
-		<h3>Here are the products </h3>
+		<h3>Here are the products </h3>&nbsp; 
+		<a href="#add" class="btn btn-warning"><font color="white">click me to add a product</font></a>
 		
 				<sql:setDataSource var = "prodDB" driver="com.mysql.jdbc.Driver" 
 							url="jdbc:mysql://localhost:3306/Catalog" user="root" password=""/>
@@ -80,13 +81,14 @@ a{padding:20px;margin:20px;border-radius:5px;color:#fef}
 		<hr>
 		<h2 align="center">ADD NEW PRODUCTS HERE!</h2>
 		
-		<div class="container">
-		<form method="POST" action="/add-product.go">
+		<div class="container" id="add">
+		<form method="POST" action="/add-product.go" enctype="multipart/form-data">
 			New Product 
 						<p></p>
 						<p>Name:&nbsp;&nbsp; <input name="name" type="text" /> </p>
 					   <p>Category:&nbsp;&nbsp; <input name="prodCat" type="text" /> </p>
 					   <p>Price:&nbsp;&nbsp; <input name="price" type="text" /> </p>
+					   <p>Insert image:&nbsp;<input type="file" name="prodimage"/> </p>
 					   <p> <input name="Add" type="submit" class="btn btn-success"/> </p>
 		</form>
 		</div>

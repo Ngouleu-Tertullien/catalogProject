@@ -49,7 +49,7 @@ a{padding:20px;margin:20px;border-radius:5px;color:#fef}
 				<li><a href="/product.do">Product</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/logout.do" class="btn btn-danger"><font color = "white">Logout</font></a></li>
+				<li><a href="/logout.do" class="btn btn-danger"><font color = "pink">Logout</font></a></li>
 			</ul>
 		</div>
 
@@ -57,18 +57,23 @@ a{padding:20px;margin:20px;border-radius:5px;color:#fef}
 
 	<div class="container">
 		<H1>HOME PAGE</H1>
-		<p>Click to navigate in this page...</p> <br>
 		<ul>
-		<li><a href="/category.do">Navigate</a></li>
-		</ul>
+		<li><a href="/category.do" class="btn btn-warning">Navigate to other pages</a></li>
+		</ul><br><br><br>
+		
+<form method="post" action="/home.do" enctype="multipart/form-data"> 
+<h1>Insert an Image into MySQL Database!</h1>
+<input type="submit" name="submit" value="Submit">
+</form>
+
 		
 	</div>
 
-	<footer class="footer">
+	<!-- <footer class="footer">
 		<div class="container">
 			<p>footer content</p>
 		</div>
-	</footer>
+	</footer>-->
 
 	<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
 	<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>

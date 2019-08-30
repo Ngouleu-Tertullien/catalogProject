@@ -15,7 +15,7 @@ a{padding:2px;margin:10px;border-radius:5px;color:#54b0bc; display:inline-block;
 p{text-align:center; font-size:20px; color:#e0587c}
 input{width:50%; border:3px solid #60bc54; border-radius:5px; height: 40px; padding:10px}
 input[type="submit"]:hover{background-color:#54b0bc; border:0}
-input[type="submit"]{width:30%; background-color:#60bc54; border:0;cursor;pointer}
+input[type="submit"]{width:20%; background-color:#60bc54; border:0;cursor;pointer}
 
 </style>
 
@@ -55,7 +55,7 @@ input[type="submit"]{width:30%; background-color:#60bc54; border:0;cursor;pointe
 				<li><a href="/product.do">Product</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/logout.do" class="btn btn-danger"><font color = "white">Logout</font></a></li>
+				<li><a href="/logout.do" class="btn btn-danger"><font color = "pink">Logout</font></a></li>
 			</ul>
 		</div>
 
@@ -74,11 +74,11 @@ input[type="submit"]{width:30%; background-color:#60bc54; border:0;cursor;pointe
 
 	</div>
 
-	<footer class="footer">
+	<!-- <footer class="footer">
 		<div class="container">
 			<p>footer content</p>
 		</div>
-	</footer>
+	</footer>-->
 
 	<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
 	<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>

@@ -56,7 +56,7 @@ input[type="submit"]{width:30%; background-color:#60bc54; border:0;cursor;pointe
 				<li><a href="/product.do">Product</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/logout.do" class="btn btn-danger"><font color = "white">Logout</font></a></li>
+				<li><a href="/logout.do" class="btn btn-danger"><font color = "pink">Logout</font></a></li>
 			</ul>
 		</div>
 
@@ -71,17 +71,17 @@ input[type="submit"]{width:30%; background-color:#60bc54; border:0;cursor;pointe
 		<p><input type="submit" value="LOGIN"/></p>
 	</form>
 	<ul>
-		<li><a href="/home.do">go to Home page</a></li>
-		<li><a href="/signup.do">SIGNUP</a></li>
+		<li><a href="/home.do" class="btn btn-warning">go to Home page</a></li>
+		<li><a href="/signup.do"><button type="button" class="btn btn-warning">SIGNUP</button></a></li>
 		</ul>
 
 	</div>
 
-	<footer class="footer">
+	<!-- <footer class="footer">
 		<div class="container">
 			<p>footer content</p>
 		</div>
-	</footer>
+	</footer>-->
 
 	<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
 	<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>

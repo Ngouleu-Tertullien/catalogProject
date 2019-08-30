@@ -49,7 +49,7 @@ a{padding:20px;margin:20px;border-radius:5px;color:#fef}
 				<li><a href="/product.do">Product</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/logout.do" class="btn btn-danger"><font color = "white">Logout</font></a></li>
+				<li><a href="/logout.do" class="btn btn-danger"><font color = "pink">Logout</font></a></li>
 			</ul>
 		</div>
 
@@ -59,6 +59,8 @@ a{padding:20px;margin:20px;border-radius:5px;color:#fef}
 		<H1>CATEGORY PAGE</H1>
 		
 		<h3>Here are the Categories</h3>
+		<a href="#add" class="btn btn-warning"><font color="white">click me to add a category</font></a>
+		
 		<sql:setDataSource var = "catDB" driver="com.mysql.jdbc.Driver" 
 							url="jdbc:mysql://localhost:3306/Catalog" user="root" password=""/>
 		<sql:query var = "rs" dataSource = "${catDB}">select * from category</sql:query>
@@ -77,20 +79,21 @@ a{padding:20px;margin:20px;border-radius:5px;color:#fef}
 		
 		<hr>
 		
+		<div class="container" id="add">
 		<h2>ADD NEW CATALOGS HERE!</h2>
 		<form method="POST" action="/add-catalog.go">
 			New Product :<p> Category Name: <input name="catname" type="text" /> </p>						
 					   <p> <input name="Add" type="submit" class="btn btn-success"/> </p>
 		</form>
-		
+		</div>
 
 	</div>
 
-	<footer class="footer">
+	<!-- <footer class="footer">
 		<div class="container">
 			<p>footer content</p>
 		</div>
-	</footer>
+	</footer>-->
 
 	<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
 	<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
